@@ -171,13 +171,12 @@ export default {
       } else {
         this.currentTab = e.target.dataset.current
       }
-    },
-    swiperTab (e) {
-      console.log(e.target.current)
-      this.currentTab = e.detail.current
     }
   },
-
+  swiperTab (e) {
+    console.log(e.target.current)
+    this.currentTab = e.detail.current
+  },
   onLoad: function () {
     const that = this
     /**
