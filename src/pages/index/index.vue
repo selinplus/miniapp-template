@@ -39,9 +39,9 @@
       <!-- <swiper-item><p>在海运，引航等单位从事驾驶辅助工作，如水手机工，三副三管轮，二副二管轮，船舶管理员，引航调度，轮机管理，机务管理等</p></swiper-item>
       <swiper-item><p>中远海运，青岛韦立，青岛源丰润，招商轮船，中外运，神华集团，南京油运等知名企业</p></swiper-item>
       <swiper-item><p>皇家加勒比邮轮，公主邮轮，歌诗达邮轮，星梦邮轮，丽星邮轮等</p></swiper-item> -->
-      <swiper-item><image src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/1-3.jpg" class="slide-image" mode="aspectFill"/></swiper-item>
-      <swiper-item><image src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/1.jpg" class="slide-image" mode="aspectFill"/></swiper-item>
-      <swiper-item><image src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/2.jpg" class="slide-image" mode="aspectFill"/></swiper-item>
+      <block><swiper-item><img src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/1-3.jpg" class="slide-image" mode="aspectFill"/></swiper-item></block>
+      <block><swiper-item><img src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/1.jpg" class="slide-image" mode="aspectFill"/></swiper-item></block>
+      <block><swiper-item><img src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/2.jpg" class="slide-image" mode="aspectFill"/></swiper-item></block>
     </swiper>
     <div class="desc">
       <p>烟台宇逸船舶管理公司100%安排就业，签订就业协议</p>
@@ -171,12 +171,13 @@ export default {
       } else {
         this.currentTab = e.target.dataset.current
       }
+    },
+    swiperTab (e) {
+      console.log(e.target.current)
+      this.currentTab = e.detail.current
     }
   },
-  swiperTab (e) {
-    console.log(e.target.current)
-    this.currentTab = e.detail.current
-  },
+
   onLoad: function () {
     const that = this
     /**
