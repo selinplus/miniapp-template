@@ -35,16 +35,33 @@
       <div class="swiper-tab-item" :class="currentTab==1?'active':''" data-current="1" @click="clickTab">派遣公司</div>
       <div class="swiper-tab-item" :class="currentTab==2?'active':''" data-current="2" @click="clickTab">派遣海乘</div>
     </div>
-    <swiper :current="currentTab" duration="300"  @change="swiperTab">
-      <!-- <swiper-item><p>在海运，引航等单位从事驾驶辅助工作，如水手机工，三副三管轮，二副二管轮，船舶管理员，引航调度，轮机管理，机务管理等</p></swiper-item>
-      <swiper-item><p>中远海运，青岛韦立，青岛源丰润，招商轮船，中外运，神华集团，南京油运等知名企业</p></swiper-item>
-      <swiper-item><p>皇家加勒比邮轮，公主邮轮，歌诗达邮轮，星梦邮轮，丽星邮轮等</p></swiper-item> -->
-      <block><swiper-item><img src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/1-3.jpg" class="slide-image" mode="aspectFill"/></swiper-item></block>
-      <block><swiper-item><img src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/1.jpg" class="slide-image" mode="aspectFill"/></swiper-item></block>
-      <block><swiper-item><img src="https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/2.jpg" class="slide-image" mode="aspectFill"/></swiper-item></block>
+    <swiper class="swiper-box" :current="currentTab" duration="300" @change="swiperTab">
+      <swiper-item>
+        <ul>
+          <li class="toa">在海运、引航等单位从事驾驶辅助工作</li>
+          <li class="toa">水手机工、三副三管轮</li>
+          <li class="toa">二副二管轮、船舶管理员</li>
+          <li class="toa">引航调度、轮机管理、机务管理等</li>
+        </ul>
+      </swiper-item>
+      <swiper-item>
+        <ul>
+          <li class="toa">中远海运、青岛韦立</li>
+          <li class="toa">青岛源丰润、招商轮船</li>
+          <li class="toa">中外运、神华集团、南京油运</li>
+        </ul>
+      </swiper-item>
+      <swiper-item>
+        <ul>
+          <li class="toa">皇家加勒比邮轮、公主邮轮</li>
+          <li class="toa">歌诗达邮轮，星梦邮轮</li>
+          <li class="toa">丽星邮轮等</li>
+        </ul>
+      </swiper-item>
     </swiper>
     <div class="desc">
-      <p>烟台宇逸船舶管理公司100%安排就业，签订就业协议</p>
+      <p class="imp">公司100%安排就业，签订就业协议</p>
+      <p class="addre" @click="navi">烟台市福山区崇文街69号302(点击导航)</p>
     </div>
     <div class="intro">
       <ul class="intro-list">
@@ -53,6 +70,14 @@
           <p class="intro-info">{{ad.info}}</p>
         </li>
       </ul>
+    </div>
+    <div class="end-line">
+      <p class="cm1" @click="callme1">梦想热线:18596148218[点击拨叫]</p>
+      <p class="cm2"  @click="callme2">梦想热线:15615550258[点击拨叫]</p>
+    </div>
+    <div class="company">
+      <p>山东大耳朵软件技术支持</p>
+      <p @click="support">快速定制小程序:13287991199</p>
     </div>
   </div>
 </template>
@@ -71,7 +96,6 @@ export default {
         {url: 'https://res.cloudinary.com/selinplus/image/upload/v1530749698/business/sail_training/3.jpg'},
         {url: 'https://res.cloudinary.com/selinplus/image/upload/v1530749699/business/sail_training/1-3.jpg'},
         {url: 'https://res.cloudinary.com/selinplus/image/upload/v1530749698/business/sail_training/1-2.jpg'},
-        {url: 'https://res.cloudinary.com/selinplus/image/upload/v1530749698/business/sail_training/3.jpg'},
         {url: 'https://res.cloudinary.com/selinplus/image/upload/v1530749698/business/sail_training/2.jpg'},
         {url: 'https://res.cloudinary.com/selinplus/image/upload/v1530749698/business/sail_training/1-1.jpg'}
       ],
@@ -92,61 +116,61 @@ export default {
       tips: [
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-1.jpg',
-          info: '11111'
+          info: '欢乐'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-2.jpg',
-          info: '2222'
+          info: '沙滩'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-3.jpg',
-          info: '3333'
+          info: '微笑'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-4.jpg',
-          info: '4444'
+          info: '惬意'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-5.jpg',
-          info: '55555'
+          info: '展望'
         },
         {
-          src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-5.jpg',
-          info: '666'
+          src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-8.jpg',
+          info: '绚烂'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-6.jpg',
-          info: '777'
+          info: '专业'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/hc-7.jpg',
-          info: '888'
+          info: '开心'
         }
       ],
       tipstoo: [
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/sh-1.jpg',
-          info: '999'
+          info: '螃蟹'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/sh-2.jpg',
-          info: '101010'
+          info: '烧烤'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/sh-3.jpg',
-          info: '111111'
+          info: '鲍鱼'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/sh-4.jpg',
-          info: '121212'
+          info: '对虾'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/sh-5.jpg',
-          info: '131313'
+          info: '健身'
         },
         {
           src: 'https://res.cloudinary.com/selinplus/image/upload/v1530762650/business/sail_training/sh-6.jpg',
-          info: '141414'
+          info: '荣耀'
         }
       ]
     }
@@ -165,32 +189,44 @@ export default {
       })
     },
     clickTab (e) {
-      console.log(e.target.dataset.current)
       if (this.currentTab === e.target.dataset.current) {
         return false
       } else {
         this.currentTab = e.target.dataset.current
       }
+    },
+    navi () {
+      wx.openLocation({
+        latitude: 37.50886,
+        longitude: 121.26997,
+        scale: 28
+      })
+    },
+    callme1 () {
+      wx.makePhoneCall({
+        phoneNumber: '18596148218'
+      })
+    },
+    callme2 () {
+      wx.makePhoneCall({
+        phoneNumber: '15615550258'
+      })
+    },
+    support () {
+      wx.makePhoneCall({
+        phoneNumber: '13287991199'
+      })
     }
   },
   swiperTab (e) {
     console.log(e.target.current)
     this.currentTab = e.detail.current
   },
-  onLoad: function () {
-    const that = this
-    /**
-     * 获取系统信息
-     */
-    wx.getSystemInfo({
-      success: function (res) {
-        console.log(res)
-        that.windowWidth = res.windowWidth
-        that.windowHeight = res.windowHeight
-      }
-    })
-    console.log('winWidth is :' + this.windowWidth)
-    console.log('winHeight is :' + this.windowHeight)
+  onShareAppMessage: function (res) {
+    return {
+      title: '宇逸船舶',
+      path: '/pages/index/main'
+    }
   }
 }
 </script>
@@ -257,9 +293,6 @@ export default {
   font-style:unset;
   line-height: 1.8em;
 }
-.into{
-  padding: 0;
-}
 .intro-list{
   display: flex;
   justify-content:center;
@@ -270,6 +303,7 @@ export default {
 } */
 .intro-img{
   width: 48vw;
+  filter:drop-shadow();
 }
 /*tab panel*/
 .swiper-tab{
@@ -290,12 +324,99 @@ export default {
     color:#F65959;
     border-bottom: 4rpx solid #F65959;
 }
-swiper{
+/* swiper{
   text-align: center;
-}
+} */
 .slide-image {
   width: 100%;
   height: 100px;
 }
+.swiper-box {
+  display: block;
+  background: linear-gradient(0deg, #0f9e8b 0%, #0f9e8b 100%);
+  height: 175px;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-box view {
+  color:rgb(250, 239, 239);
+  text-align: center;
+}
+.toa {
+  line-height: 35px;
+  padding: 5px;
+}
 /*tab panel 结束*/
+.desc {
+  margin-bottom: 15px;
+  border-bottom: 1 solid orangered;
+  text-align: center;
+}
+.desc p {
+  margin: 8px;
+}
+.imp{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 30px;
+  font-size: 40rpx;
+  color:rgb(66, 66, 235);
+  width: 100%;
+  padding:5px;
+}
+.imp::before{
+  content: '';
+  border: 1px solid rgb(20, 95, 20);
+  border-radius: 10px;
+  width:10px;
+}
+.imp::after{
+  content: '';
+  border: 1px solid rgb(20, 95, 20);
+  border-radius: 10px;
+  width:10px;
+}
+.addre {
+  color:rgb(90, 83, 83);
+  line-height: 30px;
+  font-size: 40rpx;
+}
+/* p::before{
+  content: '';
+  border-right: 3px solid rgb(20, 95, 20);
+  width:5px;
+  padding: 5px;
+} */
+.end-line {
+  margin-top: 10px;
+  border-top:1px solid orangered;
+  border-bottom: 1px solid orangered;
+  margin-bottom: 10px;
+}
+.cm1 {
+  line-height: 50px;
+}
+.cm2 {
+  line-height: 50px;
+}
+.cm1::before{
+  content: '【'
+}
+.cm1::after{
+  content: '】'
+}
+.cm2::before{
+  content: '【'
+}
+.cm2::after{
+  content: '】'
+}
+.company {
+  margin: 25px;
+  color:lightgray;
+  text-align: center;
+}
+.company p {
+  line-height: 30px;
+}
 </style>
