@@ -78,7 +78,7 @@
 </template>
 
 <script>
-
+// 宇逸船舶 selinplus@hotmail.com
 export default {
   data () {
     return {
@@ -100,13 +100,6 @@ export default {
         {tit: '选择大于努力，正确的选择可以改变你的命运'},
         {tit: '从这里走出国门，走向大海，走向世界！'},
         {tit: '大海的勇士，带薪周游世界！'}
-      ],
-      adsr: [
-        {tit: '工，厨师，服务员'},
-        {tit: '险，有退休'},
-        {tit: '选择可以改变你的命运'},
-        {tit: '向大海，走向世界！'},
-        {tit: '带薪周游世界！'}
       ],
       tips: [
         {
