@@ -16,11 +16,6 @@
             <li class="ad-item" v-for="(ad,index) in ads" :key="index">{{ad.tit}}</li>
           </ul>
       </div>
-      <div class="right">
-          <ul class="ad-list">
-            <li class="ad-item" v-for="(ad,index) in adsr" :key="index">{{ad.tit}}</li>
-          </ul>
-      </div>
     </div>
     <div class="intro">
       <ul class="intro-list">
@@ -100,11 +95,11 @@ export default {
         {url: 'https://res.cloudinary.com/selinplus/image/upload/v1530749698/business/sail_training/1-1.jpg'}
       ],
       ads: [
-        {tit: '招聘国企水手，机'},
-        {tit: '年薪十万，交五'},
-        {tit: '选择大于努力，正确的'},
-        {tit: '从这里走出国门，走'},
-        {tit: '大海的勇士，'}
+        {tit: '招聘国企水手，机工，厨师，服务员'},
+        {tit: '年薪十万，交五险，有退休'},
+        {tit: '选择大于努力，正确的选择可以改变你的命运'},
+        {tit: '从这里走出国门，走向大海，走向世界！'},
+        {tit: '大海的勇士，带薪周游世界！'}
       ],
       adsr: [
         {tit: '工，厨师，服务员'},
@@ -263,7 +258,7 @@ export default {
 /*中部内容*/
 .content{
   display: grid;
-  grid-template-columns: 50% auto;
+  grid-template-columns: auto;
   grid-column-gap: 0;
   width: 100%;
   padding:0;
@@ -277,13 +272,13 @@ export default {
   font-size: 0.8em;
 }
 .left{
-  text-align: right;
+  text-align: center;
   color:white;
-  background:#35378f;/*linear-gradient(90deg,#fff 10%,#35378f 100%);*/
-}
-.right{
-  color:#35378f;
-  background:rgb(231, 192, 192);
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
+  background:#35378f;
 }
 .ad-list{
   padding: 0;
